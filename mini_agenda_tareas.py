@@ -29,31 +29,29 @@ def listar_tareas():
             print ("[x]",i)
         else:
             print("[]",i)
-    return "Aqui esta el listado de tus tareas"
+    return ""
 
 def contar_pendientes():
+    cont =0
     for i in tareas:
-        cont =0
         if tareas[i] == False:
-            cont = cont+1
-        
-    return cont
+            cont = cont +1
+    if cont >1:
+        return (f"Hay un total de {cont} tareas pendientes")
+    elif cont ==1:
+        return (f"Hay un total de {cont} tarea pendientes")
+    else:
+        return "No hay tareas pendientes"
 
 if __name__=="__main__":
     
-    #Aqui creo el diccionario con la lista de tareas que pide el ejercicio:
-    print("voy a listar las tareas")
-    print("")
     print(listar_tareas())
-    print("voy a agregar Sacar la basura")
-    print("")
     #agregar_tareas("sacar la basura")
-    print("marco como hecha estudiar python")
     print("")
     marcar_hecha("estudiar python")
-    print("voy a listar las tareas")
-    print("")
     print(listar_tareas())
+    print(contar_pendientes())
+
 
 
 
