@@ -1,7 +1,4 @@
 
-
-
-
 #creo el diccionario
 
 listaTareas=["estudiar python", "hacer ejercicio", "leer 10 paginas"]
@@ -11,11 +8,10 @@ for i in range (n):
     for j in listaTareas:
         tareas[j]= False
 
+def agregar_tareas(tareaNueva):
+    tareas[tareaNueva] = False
+        
 
-
-# def agregar_tareas(tareaNueva):
-
-    
 
 def marcar_hecha(tarea):
     if tarea in tareas:
@@ -46,15 +42,7 @@ def contar_pendientes():
 if __name__=="__main__":
     
     print(listar_tareas())
-    #agregar_tareas("sacar la basura")
-    print("")
+    agregar_tareas("sacar la basura")
     marcar_hecha("estudiar python")
     print(listar_tareas())
     print(contar_pendientes())
-
-
-
-
-
-    
-    # agregar_tareas("barrer", "False")
