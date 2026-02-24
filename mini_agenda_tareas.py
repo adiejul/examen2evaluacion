@@ -29,20 +29,15 @@ def contar_pendientes(tareas):
 
 
 if __name__=="__main__":
-    tareas=["estudiar python", "hacer ejercicio", "leer 10 paginas"]
-    n=len(tareas)
+    
+    #Aqui creo el diccionario con la lista de tareas que pide el ejercicio:
 
+    listaTareas=["estudiar python", "hacer ejercicio", "leer 10 paginas"]
+    n=len(listaTareas)
     diccionario={}
-    for i in tareas:
-        diccionario=tareas[i]
-        diccionario[i]= False
-
-    print (diccionario)
-
+    for i in range (n):
+        for j in listaTareas:
+            diccionario[j]= False
     
     
-
-'''
     agregar_tareas("barrer", "no hecha")
-
-'''
